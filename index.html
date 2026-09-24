@@ -1,818 +1,1174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>UnboxCrew | Travel Together, Explore More</title>
+<title>UnboxCrew | Mussoorie, Landour & Rishikesh</title>
 
-  <meta name="description" content="UnboxCrew presents a Mussoorie, Landour & Rishikesh group trip from Delhi. 3 Days & 2 Nights. Booking open for 9 October 2026.">
+<meta name="description"
+content="UnboxCrew presents a premium group escape to Mussoorie, Landour & Rishikesh from Delhi. 9 October 2026.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #172033;
-      background: #f7faff;
-      line-height: 1.6;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    a {
-      text-decoration: none;
-    }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#071426;
+    color:#fff;
+    overflow-x:hidden;
+}
 
-    /* NAVBAR */
+a{
+    text-decoration:none;
+}
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255,255,255,0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
+/* ================= NAVBAR ================= */
 
-    .logo {
-      font-size: 25px;
-      font-weight: 900;
-      letter-spacing: -1px;
-      color: #0b5ed7;
-    }
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:16px 6%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    .logo span {
-      color: #172033;
-    }
+    background:rgba(5,15,30,.78);
+    backdrop-filter:blur(14px);
 
-    .nav-btn {
-      background: #0b5ed7;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 14px;
-    }
+    border-bottom:1px solid rgba(255,193,48,.15);
+}
 
-    /* HERO */
+.nav-logo{
+    height:58px;
+    width:auto;
+    object-fit:contain;
+}
 
-    .hero {
-      min-height: 100vh;
-      padding: 140px 7% 80px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(90deg, rgba(5,20,45,0.90), rgba(5,20,45,0.35)),
-        url("https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=1800&q=85")
+.nav-btn{
+    background:linear-gradient(135deg,#f6c343,#d99508);
+    color:#071426;
+    padding:12px 22px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:800;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    padding:140px 7% 80px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,12,27,.94) 0%,
+            rgba(3,12,27,.72) 42%,
+            rgba(3,12,27,.20) 100%
+        ),
+        url("https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=2200&q=90")
         center/cover;
-      color: white;
-    }
+}
 
-    .hero-content {
-      max-width: 760px;
-    }
+.hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
 
-    .badge {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      padding: 8px 15px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(246,195,67,.13),
+            transparent 30%
+        );
 
-    .hero h1 {
-      font-size: clamp(45px, 7vw, 82px);
-      line-height: 0.98;
-      letter-spacing: -3px;
-      margin-bottom: 25px;
-    }
+    pointer-events:none;
+}
 
-    .hero h1 span {
-      color: #67b7ff;
-    }
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+}
 
-    .hero p {
-      font-size: 19px;
-      max-width: 620px;
-      color: #e6eef9;
-      margin-bottom: 32px;
-    }
+.brand-mark{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:30px;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+.brand-mark img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    border-radius:50%;
+    box-shadow:0 0 35px rgba(246,195,67,.25);
+}
 
-    .primary-btn {
-      background: #0b73e8;
-      color: white;
-      padding: 15px 25px;
-      border-radius: 35px;
-      font-weight: 800;
-      display: inline-block;
-    }
+.presented{
+    font-size:13px;
+    letter-spacing:3px;
+    color:#f6c343;
+    font-weight:800;
+}
 
-    .secondary-btn {
-      background: white;
-      color: #172033;
-      padding: 15px 25px;
-      border-radius: 35px;
-      font-weight: 800;
-      display: inline-block;
-    }
+.hero h1{
+    font-size:clamp(48px,7vw,88px);
+    line-height:.95;
+    letter-spacing:-4px;
+    margin-bottom:24px;
+}
 
-    /* SECTIONS */
+.hero h1 span{
+    color:#f6c343;
+}
 
-    section {
-      padding: 85px 7%;
-    }
+.hero-sub{
+    font-size:19px;
+    line-height:1.6;
+    color:#d9e3f1;
+    max-width:650px;
+    margin-bottom:30px;
+}
 
-    .section-title {
-      text-align: center;
-      max-width: 700px;
-      margin: auto auto 45px;
-    }
+.trip-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:30px;
+}
 
-    .section-title h2 {
-      font-size: 42px;
-      line-height: 1.1;
-      margin-bottom: 12px;
-      color: #101828;
-    }
+.meta{
+    padding:10px 16px;
+    border-radius:30px;
 
-    .section-title p {
-      color: #667085;
-    }
+    background:rgba(255,255,255,.09);
+    border:1px solid rgba(255,255,255,.18);
 
-    /* TRIP */
+    font-size:13px;
+    font-weight:700;
+}
 
-    .trip-card {
-      max-width: 1100px;
-      margin: auto;
-      background: white;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(20,50,100,0.10);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
+.hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
 
-    .trip-image {
-      min-height: 500px;
-      background:
-        linear-gradient(rgba(5,25,55,0.10), rgba(5,25,55,0.25)),
-        url("https://images.unsplash.com/photo-1605640840605-14ac1855827b?auto=format&fit=crop&w=1000&q=85")
+.primary{
+    background:linear-gradient(135deg,#ffd45a,#d99a13);
+    color:#071426;
+    padding:16px 27px;
+    border-radius:35px;
+    font-weight:900;
+    box-shadow:0 10px 30px rgba(246,195,67,.22);
+}
+
+.secondary{
+    border:1px solid rgba(255,255,255,.35);
+    color:#fff;
+    padding:16px 27px;
+    border-radius:35px;
+    font-weight:800;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(8px);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:90px 7%;
+}
+
+.section-label{
+    color:#f6c343;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-size:clamp(34px,5vw,58px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+}
+
+.section-description{
+    color:#aebed1;
+    max-width:650px;
+    line-height:1.7;
+}
+
+/* ================= SNAPSHOT ================= */
+
+.snapshot{
+    background:#08182c;
+}
+
+.snapshot-grid{
+    max-width:1150px;
+    margin:45px auto 0;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.snapshot-card{
+    padding:27px 20px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+
+    transition:.3s;
+}
+
+.snapshot-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(246,195,67,.45);
+}
+
+.snapshot-icon{
+    font-size:27px;
+    margin-bottom:13px;
+}
+
+.snapshot-card h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.snapshot-card p{
+    color:#93a5bb;
+    font-size:13px;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience{
+    background:#050f1e;
+}
+
+.experience-grid{
+    max-width:1150px;
+    margin:45px auto 0;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.experience-card{
+    min-height:300px;
+    padding:28px;
+
+    border-radius:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    position:relative;
+    overflow:hidden;
+
+    background-size:cover;
+    background-position:center;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.experience-card:before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        transparent 15%,
+        rgba(2,10,22,.90)
+    );
+}
+
+.experience-card-content{
+    position:relative;
+    z-index:2;
+}
+
+.experience-card h3{
+    font-size:25px;
+    margin-bottom:6px;
+}
+
+.experience-card p{
+    color:#d4deeb;
+    font-size:14px;
+}
+
+.mussoorie{
+    background-image:url("https://images.unsplash.com/photo-1597074866923-dc0589150358?auto=format&fit=crop&w=900&q=85");
+}
+
+.landour{
+    background-image:url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85");
+}
+
+.rishikesh{
+    background-image:url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=85");
+}
+
+/* ================= ITINERARY ================= */
+
+.itinerary{
+    background:#08182c;
+}
+
+.timeline{
+    max-width:900px;
+    margin:50px auto 0;
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:130px 1fr;
+    gap:30px;
+
+    padding:25px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.09);
+}
+
+.timeline-day{
+    color:#f6c343;
+    font-weight:900;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.timeline-content h3{
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.timeline-content p{
+    color:#9fb0c5;
+    line-height:1.7;
+    font-size:14px;
+}
+
+/* ================= PRICING ================= */
+
+.pricing{
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(246,195,67,.12),
+            transparent 35%
+        ),
+        #050f1e;
+}
+
+.price-wrapper{
+    max-width:950px;
+    margin:45px auto 0;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.price-card{
+    padding:35px;
+    border-radius:27px;
+
+    background:linear-gradient(
+        145deg,
+        #10233d,
+        #091628
+    );
+
+    border:1px solid rgba(255,255,255,.10);
+}
+
+.price-card.featured{
+    border:1px solid #f6c343;
+    box-shadow:0 20px 60px rgba(246,195,67,.10);
+}
+
+.price-label{
+    color:#f6c343;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.price-card h3{
+    font-size:23px;
+    margin:10px 0;
+}
+
+.price{
+    font-size:46px;
+    font-weight:900;
+    color:#fff;
+}
+
+.price small{
+    color:#92a5bc;
+    font-size:13px;
+    font-weight:500;
+}
+
+.offer{
+    margin:20px 0;
+    padding:14px;
+
+    border-radius:15px;
+
+    background:rgba(246,195,67,.10);
+    border:1px solid rgba(246,195,67,.25);
+
+    color:#f8d978;
+    font-size:13px;
+    font-weight:700;
+}
+
+.booking{
+    color:#9fb0c5;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+/* ================= INCLUDED ================= */
+
+.included{
+    background:#08182c;
+}
+
+.included-grid{
+    max-width:1050px;
+    margin:45px auto 0;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.included-item{
+    padding:18px;
+    border-radius:17px;
+
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.07);
+
+    color:#d8e2ef;
+    font-size:14px;
+}
+
+.included-item span{
+    color:#f6c343;
+    margin-right:8px;
+}
+
+/* ================= CTA ================= */
+
+.final-cta{
+    padding:110px 7%;
+    text-align:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(3,14,30,.95),
+            rgba(7,31,58,.90)
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=90")
         center/cover;
+}
+
+.final-cta h2{
+    font-size:clamp(38px,6vw,68px);
+    line-height:1;
+    margin-bottom:18px;
+}
+
+.final-cta h2 span{
+    color:#f6c343;
+}
+
+.final-cta p{
+    color:#c1cede;
+    margin:0 auto 30px;
+    max-width:600px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#030a14;
+    padding:45px 7%;
+    text-align:center;
+}
+
+.footer-logo{
+    height:70px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#71839a;
+    font-size:13px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:999;
+
+    width:62px;
+    height:62px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#25D366;
+    color:#fff;
+
+    font-size:28px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.whatsapp:after{
+    content:"";
+    position:absolute;
+    inset:-5px;
+    border-radius:50%;
+    border:1px solid rgba(37,211,102,.35);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(.95);opacity:1}
+    70%{transform:scale(1.18);opacity:0}
+    100%{transform:scale(1.18);opacity:0}
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        padding:12px 5%;
     }
 
-    .trip-content {
-      padding: 45px;
+    .nav-logo{
+        height:48px;
     }
 
-    .trip-content .small {
-      color: #0b73e8;
-      font-weight: 800;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
+    .nav-btn{
+        padding:9px 15px;
+        font-size:12px;
     }
 
-    .trip-content h3 {
-      font-size: 38px;
-      line-height: 1.1;
-      margin: 10px 0 15px;
+    .hero{
+        min-height:100vh;
+        padding:125px 6% 65px;
+
+        background-position:62% center;
     }
 
-    .trip-content p {
-      color: #667085;
-      margin-bottom: 20px;
+    .brand-mark img{
+        width:70px;
+        height:70px;
     }
 
-    .trip-details {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin: 25px 0;
+    .hero h1{
+        font-size:49px;
+        letter-spacing:-2.5px;
     }
 
-    .detail {
-      background: #f3f7fc;
-      padding: 13px;
-      border-radius: 12px;
-      font-size: 14px;
-      font-weight: 700;
+    .hero-sub{
+        font-size:16px;
     }
 
-    /* PRICING */
-
-    .pricing {
-      background: #eef6ff;
+    section{
+        padding:70px 6%;
     }
 
-    .price-grid {
-      max-width: 950px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
+    .snapshot-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .price-card {
-      background: white;
-      padding: 35px;
-      border-radius: 25px;
-      box-shadow: 0 15px 40px rgba(20,50,100,0.08);
-      position: relative;
+    .experience-grid{
+        grid-template-columns:1fr;
     }
 
-    .price-card.featured {
-      border: 2px solid #0b73e8;
+    .experience-card{
+        min-height:280px;
     }
 
-    .popular {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      background: #0b73e8;
-      color: white;
-      padding: 6px 11px;
-      border-radius: 20px;
-      font-size: 11px;
-      font-weight: 800;
+    .timeline-item{
+        grid-template-columns:90px 1fr;
+        gap:18px;
     }
 
-    .price-card h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
+    .price-wrapper{
+        grid-template-columns:1fr;
     }
 
-    .price {
-      font-size: 43px;
-      font-weight: 900;
-      color: #0b5ed7;
-      margin-bottom: 5px;
+    .included-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .price small {
-      font-size: 14px;
-      color: #667085;
-      font-weight: 500;
+}
+
+@media(max-width:480px){
+
+    .snapshot-grid{
+        grid-template-columns:1fr;
     }
 
-    .early {
-      background: #fff4dc;
-      color: #8a5a00;
-      padding: 12px;
-      border-radius: 12px;
-      margin: 18px 0;
-      font-weight: 700;
-      font-size: 14px;
+    .included-grid{
+        grid-template-columns:1fr;
     }
 
-    /* FEATURES */
-
-    .features {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+    .hero-actions{
+        flex-direction:column;
     }
 
-    .feature {
-      background: white;
-      padding: 28px;
-      border-radius: 20px;
-      box-shadow: 0 10px 35px rgba(20,50,100,0.06);
+    .primary,
+    .secondary{
+        text-align:center;
+        width:100%;
     }
 
-    .feature-icon {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
+}
 
-    .feature h3 {
-      margin-bottom: 7px;
-    }
-
-    .feature p {
-      color: #667085;
-      font-size: 14px;
-    }
-
-    /* CTA */
-
-    .cta {
-      background:
-        linear-gradient(135deg, #0755b8, #0b8ee8);
-      color: white;
-      text-align: center;
-      border-radius: 35px;
-      max-width: 1100px;
-      margin: 70px auto;
-      padding: 70px 30px;
-    }
-
-    .cta h2 {
-      font-size: 45px;
-      line-height: 1.1;
-      margin-bottom: 15px;
-    }
-
-    .cta p {
-      max-width: 600px;
-      margin: 0 auto 28px;
-      color: #e5f2ff;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: #081426;
-      color: white;
-      padding: 50px 7%;
-      text-align: center;
-    }
-
-    footer .logo {
-      margin-bottom: 10px;
-    }
-
-    footer p {
-      color: #aebbd0;
-      font-size: 14px;
-    }
-
-    /* WHATSAPP FLOAT */
-
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 999;
-      background: #25D366;
-      color: white;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.20);
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 800px) {
-
-      nav {
-        padding: 15px 5%;
-      }
-
-      .nav-btn {
-        padding: 8px 14px;
-        font-size: 12px;
-      }
-
-      .hero {
-        padding: 120px 6% 70px;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 65px 6%;
-      }
-
-      .section-title h2 {
-        font-size: 34px;
-      }
-
-      .trip-card {
-        grid-template-columns: 1fr;
-      }
-
-      .trip-image {
-        min-height: 330px;
-      }
-
-      .trip-content {
-        padding: 30px;
-      }
-
-      .trip-content h3 {
-        font-size: 31px;
-      }
-
-      .price-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .cta h2 {
-        font-size: 34px;
-      }
-    }
-  </style>
+</style>
 </head>
+
 
 <body>
 
-  <!-- NAVIGATION -->
+<!-- NAVIGATION -->
 
-  <nav>
-    <div class="logo">
-      unbox<span>crew</span>
-    </div>
+<nav class="navbar">
+
+    <img src="logo.jpeg"
+         class="nav-logo"
+         alt="UnboxCrew">
 
     <a class="nav-btn"
-       href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20am%20interested%20in%20the%20Mussoorie%20trip.%20Please%20share%20the%20complete%20details.">
-      Enquire Now
+       href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20am%20interested%20in%20the%20Mussoorie%20trip.%20Please%20share%20the%20details.">
+       Reserve Seat
     </a>
-  </nav>
+
+</nav>
 
 
-  <!-- HERO -->
+<!-- HERO -->
 
-  <header class="hero">
+<header class="hero">
 
     <div class="hero-content">
 
-      <div class="badge">
-        🏔️ UNBOXCREW PRESENTS
-      </div>
+        <div class="brand-mark">
 
-      <h1>
-        Escape to the<br>
-        <span>Mountains.</span>
-      </h1>
+            <img src="logo.jpeg"
+                 alt="UnboxCrew Logo">
 
-      <p>
-        Mussoorie • Landour • Rishikesh
-        <br>
-        A carefully planned group escape from Delhi.
-      </p>
+            <div>
+                <div class="presented">
+                    UNBOXCREW PRESENTS
+                </div>
 
-      <div class="hero-buttons">
-
-        <a class="primary-btn"
-           href="#trip">
-          Explore The Trip
-        </a>
-
-        <a class="secondary-btn"
-           href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20know%20more%20about%20the%20Mussoorie%20trip.">
-          WhatsApp Us
-        </a>
-
-      </div>
-
-    </div>
-
-  </header>
-
-
-  <!-- FEATURED TRIP -->
-
-  <section id="trip">
-
-    <div class="section-title">
-
-      <h2>Your next escape starts here.</h2>
-
-      <p>
-        Leave the city behind and experience the mountains
-        with a group of fellow travellers.
-      </p>
-
-    </div>
-
-
-    <div class="trip-card">
-
-      <div class="trip-image"></div>
-
-      <div class="trip-content">
-
-        <div class="small">
-          Upcoming Group Trip
-        </div>
-
-        <h3>
-          Mussoorie, Landour & Rishikesh
-        </h3>
-
-        <p>
-          A 3 Days / 2 Nights mountain escape from Delhi,
-          designed for people who want to travel, explore
-          and create memories together.
-        </p>
-
-        <div class="trip-details">
-
-          <div class="detail">
-            📅 9 Oct 2026
-          </div>
-
-          <div class="detail">
-            🏔️ 3 Days / 2 Nights
-          </div>
-
-          <div class="detail">
-            🚐 Delhi Departure
-          </div>
-
-          <div class="detail">
-            🏠 Comfortable Stay
-          </div>
+                <div style="color:#b8c6d7;font-size:13px;margin-top:5px;">
+                    A MOUNTAIN ESCAPE
+                </div>
+            </div>
 
         </div>
 
-        <a class="primary-btn"
-           href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20the%20complete%20Mussoorie%20trip%20itinerary.">
-          Get Full Itinerary →
-        </a>
 
-      </div>
-
-    </div>
-
-  </section>
+        <h1>
+            Your Next<br>
+            <span>Escape Starts Here.</span>
+        </h1>
 
 
-  <!-- PRICING -->
-
-  <section class="pricing">
-
-    <div class="section-title">
-
-      <h2>Choose your stay</h2>
-
-      <p>
-        Simple pricing with a limited early-bird offer
-        for the first 5 bookings.
-      </p>
-
-    </div>
+        <p class="hero-sub">
+            Mussoorie. Landour. Rishikesh.
+            <br>
+            Leave the city behind and come find your next story in the mountains.
+        </p>
 
 
-    <div class="price-grid">
+        <div class="trip-meta">
 
-      <div class="price-card featured">
+            <div class="meta">
+                📅 09 OCT — 12 OCT 2026
+            </div>
 
-        <div class="popular">
-          EARLY BIRD
+            <div class="meta">
+                📍 DELHI DEPARTURE
+            </div>
+
+            <div class="meta">
+                🚌 AC TRAVEL
+            </div>
+
         </div>
 
-        <h3>Triple Sharing</h3>
 
-        <div class="price">
-          ₹4,700
-          <small>/ person</small>
+        <div class="hero-actions">
+
+            <a class="primary"
+               href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20Mussoorie%20trip.">
+               RESERVE YOUR SEAT →
+            </a>
+
+            <a class="secondary"
+               href="#trip">
+               EXPLORE THE TRIP ↓
+            </a>
+
         </div>
 
-        <div class="early">
-          🔥 First 5 bookings get ₹350 OFF
-          <br>
-          Early Bird Price: ₹4,350/person
+    </div>
+
+</header>
+
+
+<!-- TRIP SNAPSHOT -->
+
+<section class="snapshot" id="trip">
+
+    <div class="section-label">
+        THE ESCAPE
+    </div>
+
+    <h2 class="section-title">
+        Three destinations.<br>
+        One unforgettable escape.
+    </h2>
+
+    <p class="section-description">
+        A carefully planned group journey from Delhi through the
+        mountains, charming cafés and the spiritual energy of Rishikesh.
+    </p>
+
+
+    <div class="snapshot-grid">
+
+        <div class="snapshot-card">
+            <div class="snapshot-icon">🏔️</div>
+            <h3>Mussoorie</h3>
+            <p>Mountain views, waterfalls & iconic sights.</p>
         </div>
 
-        <p>
-          Booking amount: ₹1,000/person
-        </p>
-
-        <br>
-
-        <a class="primary-btn"
-           href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20book%20the%20Mussoorie%20trip%20on%20triple%20sharing.">
-          Book / Enquire
-        </a>
-
-      </div>
-
-
-      <div class="price-card">
-
-        <h3>Double Sharing</h3>
-
-        <div class="price">
-          ₹5,000
-          <small>/ person</small>
+        <div class="snapshot-card">
+            <div class="snapshot-icon">☕</div>
+            <h3>Landour</h3>
+            <p>Cafés, quiet lanes & old-world mountain charm.</p>
         </div>
 
-        <div class="early">
-          🔥 First 5 bookings get ₹350 OFF
-          <br>
-          Early Bird Price: ₹4,650/person
+        <div class="snapshot-card">
+            <div class="snapshot-icon">🌊</div>
+            <h3>Rishikesh</h3>
+            <p>Evening by the Ganga & Triveni Ghat Aarti.</p>
         </div>
 
-        <p>
-          Booking amount: ₹1,000/person
-        </p>
-
-        <br>
-
-        <a class="primary-btn"
-           href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20book%20the%20Mussoorie%20trip%20on%20double%20sharing.">
-          Book / Enquire
-        </a>
-
-      </div>
+        <div class="snapshot-card">
+            <div class="snapshot-icon">👥</div>
+            <h3>Travel Together</h3>
+            <p>Meet people, explore together & make memories.</p>
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- TRIP HIGHLIGHTS -->
+<!-- EXPERIENCES -->
 
-  <section>
+<section class="experience">
 
-    <div class="section-title">
+    <div class="section-label">
+        WHAT AWAITS
+    </div>
 
-      <h2>What makes the escape special?</h2>
+    <h2 class="section-title">
+        More than a destination.
+    </h2>
 
-      <p>
-        More than just a destination. It's about the journey,
-        people and experiences.
-      </p>
+    <p class="section-description">
+        From mountain viewpoints to peaceful cafés and an evening
+        beside the Ganga — the journey keeps unfolding.
+    </p>
+
+
+    <div class="experience-grid">
+
+        <div class="experience-card mussoorie">
+
+            <div class="experience-card-content">
+                <h3>Mussoorie</h3>
+                <p>
+                    Waterfalls • Viewpoints • Mall Road
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="experience-card landour">
+
+            <div class="experience-card-content">
+                <h3>Landour</h3>
+                <p>
+                    Char Dukan • Lal Tibba • Sisters' Bazaar
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="experience-card rishikesh">
+
+            <div class="experience-card-content">
+                <h3>Rishikesh</h3>
+                <p>
+                    Ganga • Triveni Ghat • Evening Aarti
+                </p>
+            </div>
+
+        </div>
 
     </div>
 
-
-    <div class="features">
-
-      <div class="feature">
-
-        <div class="feature-icon">🏔️</div>
-
-        <h3>Mountain Escape</h3>
-
-        <p>
-          Explore the beautiful landscapes and atmosphere
-          of Mussoorie and Landour.
-        </p>
-
-      </div>
+</section>
 
 
-      <div class="feature">
+<!-- SHORT ITINERARY -->
 
-        <div class="feature-icon">☕</div>
+<section class="itinerary">
 
-        <h3>Landour Vibes</h3>
+    <div class="section-label">
+        THE JOURNEY
+    </div>
 
-        <p>
-          Experience the charming streets, cafés and
-          peaceful mountain surroundings.
-        </p>
+    <h2 class="section-title">
+        A glimpse of your itinerary.
+    </h2>
 
-      </div>
-
-
-      <div class="feature">
-
-        <div class="feature-icon">🌊</div>
-
-        <h3>Rishikesh</h3>
-
-        <p>
-          Add a different experience to the trip with
-          the energy and beauty of Rishikesh.
-        </p>
-
-      </div>
+    <p class="section-description">
+        We've planned the route. You just have to enjoy the ride.
+    </p>
 
 
-      <div class="feature">
+    <div class="timeline">
 
-        <div class="feature-icon">🚐</div>
+        <div class="timeline-item">
 
-        <h3>Travel Together</h3>
+            <div class="timeline-day">
+                FRIDAY<br>
+                NIGHT
+            </div>
 
-        <p>
-          Meet fellow travellers and enjoy the journey
-          together from Delhi.
-        </p>
+            <div class="timeline-content">
 
-      </div>
+                <h3>Delhi → Mussoorie</h3>
 
+                <p>
+                    Board our AC Tempo Traveller from Delhi
+                    and begin the overnight mountain journey.
+                </p>
 
-      <div class="feature">
+            </div>
 
-        <div class="feature-icon">🏠</div>
-
-        <h3>Stay Included</h3>
-
-        <p>
-          Comfortable accommodation is included as
-          part of the trip package.
-        </p>
-
-      </div>
+        </div>
 
 
-      <div class="feature">
+        <div class="timeline-item">
 
-        <div class="feature-icon">💙</div>
+            <div class="timeline-day">
+                SATURDAY
+            </div>
 
-        <h3>UnboxCrew Experience</h3>
+            <div class="timeline-content">
 
-        <p>
-          Travel with a group, explore new places and
-          create memories beyond the usual weekend.
-        </p>
+                <h3>Mussoorie Day</h3>
 
-      </div>
+                <p>
+                    Explore some of Mussoorie's signature
+                    viewpoints, attractions and local streets.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-day">
+                SUNDAY
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>Landour → Rishikesh</h3>
+
+                <p>
+                    Discover Landour's mountain charm before
+                    heading towards Rishikesh for an evening
+                    by the Ganga.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-day">
+                MONDAY
+            </div>
+
+            <div class="timeline-content">
+
+                <h3>Back to Delhi</h3>
+
+                <p>
+                    After the overnight return journey,
+                    reach Delhi early Monday morning.
+                </p>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- CTA -->
+<!-- PRICING -->
 
-  <section>
+<section class="pricing">
 
-    <div class="cta">
+    <div class="section-label">
+        RESERVE YOUR ESCAPE
+    </div>
 
-      <h2>
-        Your mountain story<br>
-        starts here.
-      </h2>
+    <h2 class="section-title">
+        Choose your stay.
+    </h2>
 
-      <p>
-        9 October 2026 • Mussoorie • Landour • Rishikesh
-        <br>
-        Limited early-bird offer for the first 5 bookings.
-      </p>
+    <p class="section-description">
+        Early-bird pricing is available for the first five bookings.
+    </p>
 
-      <a class="secondary-btn"
-         href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20Mussoorie%20trip.">
-        Reserve My Seat →
-      </a>
+
+    <div class="price-wrapper">
+
+        <div class="price-card featured">
+
+            <div class="price-label">
+                TRIPLE SHARING
+            </div>
+
+            <h3>Group Traveller</h3>
+
+            <div class="price">
+                ₹4,700
+                <small>/ person</small>
+            </div>
+
+            <div class="offer">
+                🔥 FIRST 5 BOOKINGS<br>
+                ₹350 OFF → <strong>₹4,350</strong>
+            </div>
+
+            <div class="booking">
+                Booking amount: ₹1,000/person
+            </div>
+
+            <a class="primary"
+               href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20book%20the%20Mussoorie%20trip%20on%20triple%20sharing.">
+               RESERVE SEAT
+            </a>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <div class="price-label">
+                DOUBLE SHARING
+            </div>
+
+            <h3>More Private</h3>
+
+            <div class="price">
+                ₹5,000
+                <small>/ person</small>
+            </div>
+
+            <div class="offer">
+                🔥 FIRST 5 BOOKINGS<br>
+                ₹350 OFF → <strong>₹4,650</strong>
+            </div>
+
+            <div class="booking">
+                Booking amount: ₹1,000/person
+            </div>
+
+            <a class="primary"
+               href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20book%20the%20Mussoorie%20trip%20on%20double%20sharing.">
+               RESERVE SEAT
+            </a>
+
+        </div>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- FOOTER -->
+<!-- INCLUDED -->
 
-  <footer>
+<section class="included">
 
-    <div class="logo">
-      unbox<span>crew</span>
+    <div class="section-label">
+        YOUR TRIP INCLUDES
     </div>
+
+    <h2 class="section-title">
+        We've got the essentials covered.
+    </h2>
+
+
+    <div class="included-grid">
+
+        <div class="included-item">
+            <span>✓</span> AC Tempo Traveller
+        </div>
+
+        <div class="included-item">
+            <span>✓</span> Hotel Stay
+        </div>
+
+        <div class="included-item">
+            <span>✓</span> Dinner + Breakfast
+        </div>
+
+        <div class="included-item">
+            <span>✓</span> Mussoorie + Landour
+        </div>
+
+        <div class="included-item">
+            <span>✓</span> Rishikesh Experience
+        </div>
+
+        <div class="included-item">
+            <span>✓</span> Trip Captain / Assistance
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+    <div class="section-label">
+        09 OCTOBER 2026
+    </div>
+
+    <h2>
+        Don't just save the<br>
+        <span>post. Save your seat.</span>
+    </h2>
 
     <p>
-      Unbox the world. Together.
+        Your mountains are waiting.
+        Start your UnboxCrew journey from Delhi.
+    </p>
+
+    <a class="primary"
+       href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20want%20to%20reserve%20my%20seat%20for%20the%20Mussoorie%2C%20Landour%20%26%20Rishikesh%20trip.">
+       RESERVE YOUR SEAT →
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <img src="logo.jpeg"
+         class="footer-logo"
+         alt="UnboxCrew">
+
+    <p>
+        UNBOX THE WORLD. TOGETHER.
     </p>
 
     <br>
 
     <p>
-      © 2026 UnboxCrew. All rights reserved.
+        © 2026 UnboxCrew. All rights reserved.
     </p>
 
-  </footer>
+</footer>
 
 
-  <!-- WHATSAPP FLOATING BUTTON -->
+<!-- WHATSAPP -->
 
-  <a class="whatsapp"
-     href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20am interested%20in%20the%20Mussoorie%20trip."
-     aria-label="Chat on WhatsApp">
-    ☎
-  </a>
+<a class="whatsapp"
+   href="https://wa.me/919625131595?text=Hi%20UnboxCrew!%20I%20am%20interested%20in%20the%20Mussoorie%20trip.%20Please share the booking details."
+   aria-label="WhatsApp">
+   ☎
+</a>
+
 
 </body>
 </html>
